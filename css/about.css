@@ -1,0 +1,192 @@
+body{
+    min-width: 980px;
+    background: #eee;
+    font-family: arial;
+}
+/*暂时设置如此，具体再做添加*/
+*{
+    box-sizing: border-box;
+}
+body,dl,dd,h1,p,form{
+    margin: 0;
+}
+@media screen and (max-width: 980px) {
+    .github-icon{
+        display: none;
+    }
+}
+ol,ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.main{
+    position: relative;
+    width: 980px;
+    margin:100px auto 24px;
+    /*background: #fff;*/
+    /*text-align: center;*/
+}
+.main__left{
+    float:left;
+    width:485px;
+    height: 1220px;
+    background: #fff;
+}
+.main__right{
+    position:relative;
+    float:right;
+    width: 485px;
+    background: #fff;
+}
+.intro{
+    padding-top: 112px;
+    height: 200px;
+}
+.intro img{
+    position: absolute;
+    left: -83px;
+    top: -80px;
+    /*intro设置了padding，看起来头像往下了112px，实际上移到目标位置视作这个padding未设置....*/
+    width: 160px;
+    -webkit-border-radius: 160px;
+    -moz-border-radius: 160px;
+    border-radius: 160px;
+    border: 6px solid #eee;
+}
+.intro h1{
+    position: absolute;
+    left: -150px;
+    /*使用left负值会被遮盖*/
+    /*z-index: 99;*/
+    font-size: 20px;
+}
+.intro p{
+    width: 480px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-indent:23px;
+    font-size: 15px;
+    /*float: right;*/
+}
+.contact{
+    margin-top: 140px;
+    padding-top: 112px;
+    height: 200px;
+}
+.contact img{
+    position: absolute;
+    left: -58px;
+    top: 270px;
+    /*intro设置了padding，看起来头像往下了112px，实际上移到目标位置视作这个padding未设置....*/
+    width: 110px;
+    -webkit-border-radius: 160px;
+    -moz-border-radius: 160px;
+    border-radius: 160px;
+    border: 6px solid #eee;
+}
+.contact h1{
+    position: absolute;
+    left: -150px;
+    /*使用left负值会被遮盖*/
+    /*width: 500px;*/
+    font-size: 20px;
+    /*设计图是右对齐*/
+}
+.contact p{
+    width: 480px;
+    padding-left: 40px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    text-indent:23px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.edu{
+    margin-top: 140px;
+    padding-top: 112px;
+    height: 200px;
+}
+.edu img{
+    position: absolute;
+    left: -58px;
+    top: 580px;
+    vertical-align:top;
+    /*intro设置了padding，看起来头像往下了112px，实际上移到目标位置视作这个padding未设置....*/
+    width: 110px;
+    -webkit-border-radius: 160px;
+    -moz-border-radius: 160px;
+    border-radius: 160px;
+    border: 6px solid #eee;
+}
+.edu h1{
+    position: absolute;
+    left: -150px;
+    /*使用left负值会被遮盖*/
+    /*width: 500px;*/
+    vertical-align:top;
+    font-size: 20px;
+    /*设计图是右对齐*/
+}
+.edu p{
+    width: 480px;
+    padding-left: 40px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    text-indent:23px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.exp{
+    margin-top: 140px;
+    padding-top: 112px;
+    height: 200px;
+}
+.exp img{
+    position: absolute;
+    left: -58px;
+    top: 900px;
+    /*intro设置了padding，看起来头像往下了112px，实际上移到目标位置视作这个padding未设置....*/
+    width: 110px;
+    -webkit-border-radius: 160px;
+    -moz-border-radius: 160px;
+    border-radius: 160px;
+    border: 6px solid #eee;
+}
+.exp h1{
+    position: absolute;
+    left: -150px;
+    /*使用left负值会被遮盖*/
+    /*width: 500px;*/
+    font-size: 20px;
+    /*设计图是右对齐*/
+}
+.exp span{
+    position: absolute;
+    top: 1130px;
+    left: -35px;
+    height: 30px;
+    width: 70px;
+    line-height: 30px;
+    text-align: center;
+    border: 4px solid #eee;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.exp p{
+    width: 480px;
+    padding-left: 40px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    text-indent:23px;
+    font-size: 15px;
+    line-height: 30px;
+}

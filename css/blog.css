@@ -1,0 +1,428 @@
+/*2016.10.14*/
+/*页面初始设置。。。h1标签到底应该用几次合理*/
+body{
+    min-width: 980px;
+    background: #eee;
+    font-family: arial;
+}
+/*暂时设置如此，具体再做添加*/
+*{
+    box-sizing: border-box;
+}
+body,dl,dd,h1,p,form{
+    margin: 0;
+}
+@media screen and (max-width: 980px) {
+    .github-icon{
+        display: none;
+    }
+}
+ol,ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+/*头部菜单部分*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #522a5c;
+}
+.header__wrap{
+    width: 980px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+.header__logo{
+    position: absolute;
+    bottom: 5px;
+}
+.nav__top{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    text-align: center;
+}
+.nav li{
+    display: inline-block;
+    padding-left: 15px;
+}
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "宋体";
+    font-size: 14px;
+}
+.github-icon{
+    position: absolute;
+    right: 10px;
+    /*bottom: 10px;*/
+    top:46px;
+}
+.icon{
+    height: 34px;
+    width: 30px;
+    background: url(../pictures/icon-github.png) no-repeat;
+}
+/*主要部分*/
+.main{
+    overflow: hidden;
+    width: 980px;
+    margin: 20px auto 0;
+}
+/*日志*/
+.left{
+    width: 710px;
+    float: left;
+}
+.dairy{
+    position: relative;
+    /*overflow: hidden;*/
+    /*height:370px;*/
+    width: 710px;
+    padding: 20px 20px 60px 20px;
+    margin-bottom: 10px;
+    background-color:#fff;
+}
+/*设置字符间距*/
+.dairy__title{
+    font-size: 16px;
+    color: #a660b7;
+    line-height: 14px;
+    letter-spacing: 3px;
+}
+.dairy__subtitle {
+    margin-top: 11px;
+    font-size: 12px;
+    color: #666;
+    line-height: 12px;
+    letter-spacing: 2px;
+}
+/*文字截断问题，不知道css能不能解决*/
+.dairy__content{
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+    margin-top: 18px;
+    /*width: 200px;*/
+    /*height: 260px;*/
+    line-height: 22px;
+    font-size: 15px;
+    text-indent:30px;
+}
+.dairy__msg{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 10px;
+    color: #999;
+}
+.dairy__status{
+    position: absolute;
+    left: -50px;
+    /*margin-left: -50px;*/
+    top:20px;
+    width: 50px;
+    height: 80px;
+    text-align: center;
+    /*background-color: purple;*/
+}
+.dairy__status a{
+    display: inline-block;
+    width: 50px;
+    line-height: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+.dairy__status-top{
+    background: #522a5c;
+}
+.dairy__status-bottom{
+    background: #a660b7;
+}
+/*页码部分*/
+.page{
+    font-size:0;
+    margin-top: 10px;
+    margin-bottom: 332px;
+    text-align:center;
+}
+.page li{
+    display:inline-block;
+    height: 35px;
+    margin-left: 10px;
+    /*padding: 11px 20px;*/
+    background: #fff;
+}
+.page a{
+    display: inline-block;
+    height: 35px;
+    padding: 11px 15px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+}
+/*当前页也需要加上下面这个样式*/
+.page a:hover{
+    color: #fff;
+    background: #a660b7;
+}
+/*不能点击的需要白底灰字，不会*/
+.page a[disabled]{
+    color:#999;
+}
+/*右边*/
+.right{
+    float: right;
+    width: 260px;
+    margin-left: 10px;
+    /*text-align: center;*/
+}
+/*搜索框*/
+.search__wrap{
+    width: 260px;
+    /*height: 80px;*/
+    margin-bottom: 16px;
+    background: #fff;
+    text-align: center;
+}
+.search{
+    font-size: 0;
+    /*position: relative;*/
+    /*height: 80px;*/
+    padding: 20px;
+
+}
+.search__text,.search__submit{
+    /*position:absolute;*/
+    /*display: inline-block;*/
+    /*input是inline元素，但是可以设置宽度...？可以设置竖直方向的margin..算是inline-block？
+    对于inline元素可分为非替换元素和替换元素。widthheight对非替换inline元素无效，但对可替换inline元素有效
+    img元素类似y*/
+    border: none;
+    /*margin-top: 20px;*/
+}
+/*光标长短通过设置字体大小设置*/
+.search__text{
+    /*top: 19px;*/
+    /*left: 19px;*/
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px #ddd solid;
+    background: url(../pictures/search.png) no-repeat left;
+}
+.search__text[placeholder]{
+    font-size: 14px;
+    padding-left: 40px;
+}
+.search__submit{
+    cursor: pointer;
+    /*top: 19px;*/
+    /*right:19px;*/
+    height: 40px;
+    width: 42px;
+}
+.search__submit[value]{
+    font-size: 16px;
+    color: #fff;
+}
+/*文章类别*/
+.list{
+    width: 260px;
+    height: 200px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+.list__content li{
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.list__content a{
+    display: inline-block;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 4px;
+    padding-right: 25px;
+    color: #666;
+    border-left:4px solid #dfc6e6;
+}
+.list__content a:hover{
+    border-left:4px solid #522a5c;
+    color: #000;
+}
+/*日历*/
+.calendar{
+    width: 260px;
+    /*height: 242px;*/
+    background: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.calendar__date{
+    /*/!*margin-top: 11px;*!/不知道是不是因为外边距叠加导致失效*/
+    padding-top:12px;
+    width: 260px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #522a5c;
+}
+.calendar__date a{
+    color: #522a5c;
+    display: inline-block;
+    text-decoration: none;
+}
+/*左右两边的小箭头，应该用font@face...*/
+.date__left{
+    padding-left: 30px;
+    padding-right: 40px;
+}
+.date__right{
+    padding-right: 30px;
+    padding-left: 40px;
+}
+.calendar__date span{
+    letter-spacing: 4px;
+}
+.calendar__day{
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    width: 222px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+}
+.calendar__day li{
+    display:inline-block;
+    width: 26px;
+    font-size: 13px;
+    color: #999;
+}
+.calendar__time{
+    overflow: hidden;
+    width: 222px;
+    margin: 0 auto;
+    text-align: center;
+    /*background-color: red;*/
+    padding-bottom: 12px;
+    border-bottom: 1px #eee solid;
+}
+.calendar__time li{
+    margin-bottom: 12px;
+    text-align: center;
+    float: left;
+    width: 26px;
+    /*margin: 0 auto;*/
+    height: 20px;
+    /*background-color: #522a5c;*/
+}
+.calendar__time a{
+    text-decoration: none;
+    color: #999;
+}
+table{
+    text-align: center;
+    padding-bottom: 20px;
+}
+td,tr{
+    display: inline-block;
+}
+tr{
+    border-bottom: 1px solid #999;
+    padding:5px 0;
+}
+table td{
+    font-size: 13px;
+    color: #999;
+    height: 30px;
+    line-height: 30px;
+    width: 26px;
+
+}
+.haspage{
+    background-color: #a660b7;
+    color: #fff;
+}
+/*日历结束,具体写法存疑*/
+/*tag标签*/
+.tags{
+    padding: 16px;
+    width: 260px;
+    /*height: 200px;*/
+    background: #fff;
+    color: #522a5c;
+    /*background-color: transparent;*/
+}
+.tags-title{
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #999;
+}
+.tags a{
+    padding: 15px;
+    text-decoration: none;
+}
+.first{
+    font-size: 25px;
+    font-weight:bold;
+}
+.third{
+    font-size: 30px;
+    font-weight:bold ;
+}
+.sec{
+    font-size: 20px;
+}
+/*tags部分结束*/
+/*足部*/
+footer{
+    overflow: hidden;
+    width: 100%;
+    background: #000;
+    text-align: center;
+}
+.nav__bottom{
+    padding-top:11px;
+    padding-bottom:11px;
+    border-bottom: 1px #999 solid;
+}
+.footer__content{
+    overflow: hidden;
+    /*width: 980px;*/
+    display: inline-block;
+    text-align: center;
+    /*margin: 0 auto;*/
+}
+.footer__content div{
+    padding-top: 20px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+    vertical-align: top;
+    /*display:inline-block;*/
+    float: left;
+    text-align: left;
+    padding-right: 120px;
+    color: #fff;
+}
+.copy{
+    clear: both;
+    /*display: inline-block;*/
+    padding-top: 100px;
+}
+footer .icon{
+    /*padding-top: 50px;*/
+    /*clear: both;*/
+    display: inline-block;
+}
+footer p{
+    margin-bottom:50px;
+    /*padding-top: 50px;*/
+    color: #fff;
+}

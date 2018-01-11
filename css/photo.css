@@ -1,0 +1,340 @@
+/*2016-10-20*/
+body{
+    font-size: 0;
+}
+body,dl,dd,h1,h2,h3,p,form{
+    margin: 0;
+}
+@media screen and (max-width: 980px) {
+    .github-icon{
+        display: none;
+    }
+}
+img{
+    border: 0;
+    line-height: 0;
+}
+ol,ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.main{
+    overflow: hidden;
+    width: 980px;
+    margin: 20px auto;
+    padding-bottom: 200px;
+}
+.gallery{
+    overflow: hidden;
+    float: left;
+    width: 710px;
+    /*padding-bottom: 50px;*/
+}
+.gallery ul{
+    font-size: 0;
+}
+.gallery__tab li{
+    display: inline-block;
+    padding: 15px 20px;
+    border-left: 1px solid #eee;
+    border-top:4px solid #dfc6e6;
+    border-bottom:1px solid #eee;
+    font-size: 13px;
+    background-color: #fff;
+    cursor: pointer;
+}
+/*底下的边框消失不了就把它变成和背景色相同的颜色就好*/
+.list__first:hover{
+    border-top: 4px solid #522a5c;
+    border-bottom:1px solid #fff;
+}
+.list__sec:hover{
+    border-top: 4px solid #5900b2;
+    border-bottom:1px solid #fff;
+}
+.list__third:hover{
+    border-top: 4px solid #8c2300;
+    border-bottom:1px solid #fff;
+}
+.list__forth:hover{
+    border-top: 4px solid #d9a300;
+    border-bottom:1px solid #fff;
+}
+.list__last:hover{
+    border-top: 4px solid #33d965;
+    border-bottom:1px solid #fff;
+}
+.gallery__main:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.gallery__main{
+    padding: 20px 20px 50px 20px;
+    background: #fff;
+}
+/*.gallery__main img{*/
+    /*position: relative;*/
+    /*width: 130px;*/
+    /*height: 160px;*/
+    /*margin-left: 20px;*/
+    /*/!*没办法控制最后一行的图片是谁啊....怎么调整让最后一个取消左边距*!/*/
+    /*margin-bottom: 20px;*/
+/*}*/
+/*左边一条*/
+.gallery__left,.gallery__right{
+    /*height: 400px;*/
+    width: 330px;
+    float: left;
+}
+.gallery__right{
+    margin-left: 10px;
+}
+    /*第一张大图片包括描述总部分*/
+.pic__big{
+    vertical-align: top;
+    margin-bottom:10px;
+    /*display: block;*/
+    width: 330px;
+    /*height: 150px;*/
+}
+/*图片*/
+.pic__big img{
+    display: block;
+    width:330px;
+}
+/*第一张大图片的描述部分*/
+.picbig__decrp{
+    width: 330px;
+    /*height: 70px;*/
+    padding: 10px;
+    background: #522a5c;
+}
+.picbig__left,.picbig__right{
+    color: #fff;
+    display: inline-block;
+    /*float: left;*/
+}
+/*字母*/
+.picbig__left{
+    text-align: center;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color:#fff;
+    border-radius: 26px;
+    border: 1px #aba1ae solid;
+}
+/*右边的描述部分*/
+.picbig__right{
+    width: 220px;
+    padding-left: 15px;
+}
+/*描述部分的标题*/
+.picbig__decrp h2{
+    margin-bottom: 7px;
+    line-height: 16px;
+    font-size: 16px;
+}
+/*描述部分的文字段落*/
+.picbig__decrp p{
+    /*text-align: left;*/
+    line-height: 14px;
+    font-size: 11px;
+}
+.pic__listleft{
+    margin-right: 10px;
+}
+.pic__lista{
+    display: inline-block;
+    width: 160px;
+    vertical-align: top;
+    /*如果是使用内联块状的方法的话要加上这一条才能让图片框顶部对齐*/
+    /*float: left;*/
+    /*也可以用浮动的方法*/
+}
+.pic__b{
+    margin-right:10px ;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 160px;
+}
+.pic__b img{
+    display: block;
+    width:160px;
+}
+/*小图片的描述部分*/
+.picb__decrp{
+    width: 160px;
+    /*height: 70px;*/
+    padding: 10px;
+    background: #105e94;
+}
+.picb__left,.picb__right{
+    color: #fff;
+    display: inline-block;
+    /*float: left;*/
+}
+/*字母*/
+.picb__left{
+    text-align: center;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #f9f9ff;
+    border-radius: 50%;
+    border: 1px #aba1ae solid;
+}
+.picb__right{
+    width: 94px;
+    padding-left: 15px;
+}
+/*描述部分的标题*/
+.picb__decrp h2{
+    /*text-align: left;*/
+    margin-bottom: 7px;
+    line-height: 16px;
+    font-size: 16px;
+}
+/*描述部分的文字段落*/
+.picb__decrp p{
+    /*text-align: left;*/
+    line-height: 14px;
+    font-size: 11px;
+}
+.click-more{
+    width: 720px;
+    height: 50px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #fff;
+}
+.click-more a{
+    line-height: 50px;
+    text-decoration:none;
+    font-size: 15px;
+    color: #666;
+}
+.icon-double-angle-down{
+    margin-right: 15px;
+    font-weight:bold;
+    font-size: 14px;
+    color: #ccc;
+}
+/*图片应该如何设置？*/
+/*考虑大小尺寸各异，每行自适应放下多少*/
+/*侧边栏*/
+.sidebar{
+    float: right;
+    width: 260px;
+}
+.search__wrap{
+    overflow: hidden;
+    width: 260px;
+    margin-bottom: 10px;
+    text-align: center;
+    background:#fff;
+    font-size: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.search{
+    position: relative;
+    display: inline-block;
+    width: 178px;
+    height: 42px;
+}
+.icon-search{
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    /*height: 42px;*/
+    /*width: 42px;*/
+    font-weight: lighter;
+    font-size: 30px;
+    color: #e4e4e4;
+}
+.text,.button{
+    border: none;
+    height: 42px;
+    font-size: 13px;
+    line-height: 42px;
+    vertical-align: top;
+}
+.text{
+    width: 130px;
+    padding-left: 38px;
+}
+.button{
+    width: 40px;
+}
+.button[value]{
+    color: #fff;
+    font-size: 16px;
+    text-transform:uppercase;
+}
+.text,.button{
+    outline:none;
+}
+.text:focus{
+    border:1px solid #444;
+}
+.text:focus+.button{
+    border:1px solid #444;
+    border-left: none;
+}
+/*文本框和搜索框高度好像实际上不一致......*/
+/*搜索宽点击时候的边框怎么设置，为什么谷歌下总有蓝色边框,outline*/
+.ranking{
+    width: 260px;
+    background: #fff;
+}
+.ranking__content{
+    padding: 20px 12px 42px;
+}
+.ranking__content span{
+    font-size: 15px;
+    color: #666;
+}
+.rank__list{
+    margin-top: 25px;
+}
+.rank__list dd{
+    margin-bottom: 10px;
+    height: 20px;
+    font-size: 15px;
+}
+.rank__list span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    border-radius:50%;
+    background-color: #522a5c;
+    font-size: 15px;
+    line-height: 18px;
+    text-align:center;
+    color: #fff;
+}
+.rank-list-persent{
+    display:inline-block;
+    margin-left: 12px;
+    margin-right:11px;
+    width:  100px;
+    height: 18px;
+    vertical-align: top;
+    background: #f6f6f6;
+    border: 1px #5a3464 solid;
+}
+.rank-list__inner{
+    width: 100%;
+    height: 18px;
+    background-color: #522a5c;
+}

@@ -1,0 +1,267 @@
+/*by:ZhuYi
+  date:2016.9.28*/
+/*@media all() {*/
+/**/
+/*}*/
+
+body{
+    font-size: 10px;
+    min-width: 980px
+}
+*{
+    box-sizing: border-box;
+}
+body,h3,p,h3,h4,h5{
+    margin:0;
+}
+ul{
+    margin:0;
+    padding: 0;
+}
+li{
+    margin: 0;
+    list-style: none;
+}
+/*菜单部分*/
+.menu{
+    width: 100%;
+    height: 80px;
+    background: #522a5c;
+}
+.menu__content{
+    height: 80px;
+    width: 980px;
+    position: relative;
+    margin: 0 auto;
+}
+/*logo部分，除了用了绝对定位还有别的办法吗*/
+.logo{
+    position: absolute;
+    bottom: 5px;
+}
+.menu__nav{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+.menu__nav li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 28px;
+}
+.menu__nav a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "宋体";
+    font-size: 14px;
+}
+/*图标部分，但是设置了绝对定位，缩小窗口的时候会有覆盖的问题,980px仍然有覆盖问题，1050px*/
+/*使用媒体查询可以解决这个问题，但是...暂时还有覆盖问题，而且页面宽度改变*/
+.menu__icon{
+    position: absolute;
+    right:10px;
+    top: 46px;
+    /*text-indent:-9999em;*/
+}
+.github{
+    /*display: block;*/
+    height: 34px;
+    width: 30px;
+}
+.img{
+    background: url(../pictures/icon-github.png) no-repeat;
+}
+/*一定注意加上空格，否则不会生效*/
+@media screen and (max-width:1060px){
+    .menu__icon{
+        display: none;
+    }
+}
+/*由于固定了宽度是980px作为网页的内容部分，当浏览器缩小的时候宽度小于980px而作为浏览器的实际宽度*/
+/*导致内容被截断，这时候加上最小宽度这一属性值就可以解决问题
+http://www.timle.cn/width-viewport.html*/
+/*banner部分,图片那么大一个写死了宽度高度会发生形变吗，css,background-size*/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 526px;
+}
+.banner img{
+    width: 100%;
+    height: 526px;
+    background-size: auto;
+}
+/*白色的文字区域部分，线性渐变暂复制*/
+.banner__description {
+    position: absolute;
+    width: 360px;
+    right: 110px;
+    bottom: 0;
+    padding: 10px 10px 30px 10px;
+    color: #fff;
+    text-align: right;
+    /*background: #fff;*/
+    /*background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7), rgb(171, 97, 255));*/
+    /*background: -o-linear-gradient(top, rgba(255, 255, 255, 0.7), rgb(171, 97, 255)); /!* Opera 11.1 - 12*!/*/
+    /*background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7), rgb(171, 97, 255)); /!* Firefox 3.6 - 15*!/*/
+    /*background: linear-gradient(top, rgba(255, 255, 255, 0.7), rgb(171, 97, 255)); /!* 标准的语法 *!/*/
+
+    background: -moz-linear-gradient(top,  hsla(0,0%,100%,0.05) 0%, hsla(0,0%,100%,0.2) 25%, hsla(0,0%,100%,0.2) 75%, hsla(0,0%,100%,0.05) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,100%,0.05)), color-stop(25%,hsla(0,0%,100%,0.2)), color-stop(75%,hsla(0,0%,100%,0.2)), color-stop(100%,hsla(0,0%,100%,0.05)));
+    background: -webkit-linear-gradient(top,  hsla(0,0%,100%,0.05) 0%,hsla(0,0%,100%,0.2) 25%,hsla(0,0%,100%,0.2) 75%,hsla(0,0%,100%,0.05) 100%);
+    background: -o-linear-gradient(top,  hsla(0,0%,100%,0.05) 0%,hsla(0,0%,100%,0.2) 25%,hsla(0,0%,100%,0.2) 75%,hsla(0,0%,100%,0.05) 100%);
+    background: -ms-linear-gradient(top,  hsla(0,0%,100%,0.05) 0%,hsla(0,0%,100%,0.2) 25%,hsla(0,0%,100%,0.2) 75%,hsla(0,0%,100%,0.05) 100%);
+    background: linear-gradient(to bottom,  hsla(0,0%,100%,0.05) 0%,hsla(0,0%,100%,0.2) 25%,hsla(0,0%,100%,0.2) 75%,hsla(0,0%,100%,0.05) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0dffffff', endColorstr='#0dffffff',GradientType=0 );
+}
+.banner__description h3{
+    margin-bottom:12px;
+    font-size: 14px;
+}
+.banner__description p{
+    line-height: 150%;
+    font-size: 12px;
+    text-indent: 24px;
+    text-align: left;
+}
+/*主要的内容部分*/
+.main{
+    background-color: #eee;
+    /*height: 480px;*/
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 110px;
+}
+.main__center{
+    width: 980px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    display: table;
+    border-collapse:separate;
+    border-spacing: 10px;
+}
+/*用了行内块状这个属性后，需要清除掉原本的预设间隔。预设字体大小为10px，不知道间隔是不是10px
+使用了行内块状这个属性来使三个div水平的话，下面那个设置负margin的方法就失效*/
+/*或者用table-cell,但是这时候margin就不起作用了*/
+.main__center div{
+    /*display: inline-block;*/
+    /*float: left;*/
+    /*height: 360px;*/
+    /*float: left;*/
+    /*padding: ;*/
+    text-align: center;
+    padding: 10px;
+    width: 320px;
+    background-color: #fff;
+    display: table-cell;
+    /*padding-bottom: 500px;*/
+    /*margin-bottom: -500px;*/
+    /*这里设置的值要较大，一般实际不会到达。*/
+    /*clear: both;*/
+}
+/*如何在div不设置高度的情况下，三个div的高度一致?....给父元素设置overflow:hidden;子元素设置padding-bottom和margin-bottom然后互相
+抵消*/
+.main__center img{
+    width: 300px;
+    height: 180px;
+    margin: 10px 0 15px;
+}
+.main__center p{
+    text-align: left;
+    font-size: 12px;
+    line-height: 170%;
+    padding: 0 25px 30px;
+    text-indent: 24px;
+}
+.main__center_first,.main__center_first+div{
+    margin-right: 10px;
+}
+/*自我介绍部分*/
+.introduction{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 188px;
+}
+.introduction__headphoto{
+    height: 80px;
+    width: 80px;
+    border-radius:40px;
+    -webkit-border-radius:40px;
+    margin-top: -50px;
+}
+/*text-align可以让标题标签居中啊.....怎么说不能让display为block的居中的*/
+.introduction__name{
+    margin-top: 50px;
+    font-size: 20px;
+    font-family:"century gothic";
+    color: #000;
+}
+/*自我介绍的内容文字*/
+.introduction__content{
+    display: inline-block;
+    text-align: left;
+    text-indent: 28px;
+    width: 600px;
+    /*暂时设置，行高如何根据设计稿测量出来*/
+    line-height: 160%;
+    font-size: 14px;
+    color: #000;
+    margin-top: 40px;
+}
+/*足部,也可以给nav加上display:table,这样就可以设置margin来居中*/
+.footer {
+    width: 100%;
+    background-color: #000;
+    /*margin: 0 auto;*/
+    text-align: center;
+}
+/*足部的链接，这个部分也应该用padding和margin负边距来处理*/
+.footer__nav{
+    border-bottom: 1px solid #333;
+}
+.footer__nav li{
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    padding-left:25px ;
+}
+/*在链接中设置padding来增加宽度的话，点击的范围会增加一些*/
+.footer__nav a{
+    text-decoration:none;
+    color: #fff;
+}
+.footer div{
+    display: inline-block;
+    margin-right: 132px;
+    vertical-align: top;
+    /*保证链接开始的地方是同一起点*/
+}
+.footer h5{
+    color: #ccc;
+    font-size: 13px;
+    margin-top:42px;
+    margin-bottom: 30px;
+}
+.footer div li{
+    height:10px ;
+    margin-bottom: 12px;
+    text-align: left;
+}
+.footer div li a{
+    /*padding-right: 40px;*/
+    display: block;
+    padding-right: 10px;
+    /*以上两行达到让点击区域增大的效果*/
+    color: #fff;
+    text-decoration: none;
+}
+.footer div li .footer__link_secend{
+    text-decoration: underline;
+}
+/*版权信息*/
+.footer__info{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 12px;
+}
